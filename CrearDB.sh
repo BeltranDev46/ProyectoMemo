@@ -4,7 +4,7 @@ sudo apt install -y mariadb-server mariadb-client
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo mysql_secure_installation
-sudo systemctl status mariadb
+
 sudo mysql -u root -p
 
 CREATE USER 'roto3'@'172.0.0.1' IDENTIFIED BY 'admin';
