@@ -1,14 +1,22 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install -y curl software-properties-common
+sudo apt remove -y nodejs
+sudo apt autoremove -y
 
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-
-sudo apt install -y nodejs
+sudo apt install curl gnupg
 
 
-node -v && npm -v
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+source ~/.bashrc
+
+nvm install 14
+
+nvm use 14
+
+node -v || npm -v
+
 npm install
 npm install nodemon express mariabd
 
