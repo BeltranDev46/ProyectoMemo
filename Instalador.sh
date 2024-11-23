@@ -1,23 +1,43 @@
-sudo apt update
-sudo apt install -y git
-git --version
+#Pasos 
 
-git clone https://github.com/BeltranDev46/ProyectoMemo.git
+##Estar en raiz
+cd ..
 
-sudo apt install curl gnupg
+#instalar lo necesario de node y maria db y git
+sudo apt update && sudo apt upgrade -y
+sudo apt install curl wget build-essential -y
 
+#Git
+sudo apt install git
 
+#-nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
-
-
+#-Node 14
 nvm install 14
 
-nvm use 14
+#Maria db
 
-node -v || npm -v
+sudo apt install mariadb-server
+sudo systemctl status mariadb
+sudo mysql_secure_installation<<EOF
 
-cd ProyectoMemo
+y
+1234
+1234
+y
+y
+y
+y
+EOF
 
-chmod +x Arranque.sh
-./Arranque.sh
+sudo systemctl enable mariadb
+
+#entrar a desktop
+cd Desktop
+
+#descargar el repo 
+git clone https://github.com/BeltranDev46/ProyectoMemo.git
+#descargar las dependencias 
+npm intall 
+npm install nodemon express maria db
