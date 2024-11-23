@@ -4,7 +4,8 @@ EOF
 
 CREATE USER 'roto3'@'localhost' IDENTIFIED BY 'admin';
 Create database fulldb2;
-GRANT ALL PRIVILEGES ON fulldb2.* TO 'roto3'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON fulldb2.* TO 'roto3'@'localhost';
+FLUSH PRIVILEGES;
 
 
 use fulldb2;
