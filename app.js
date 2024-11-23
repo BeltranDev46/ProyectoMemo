@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const contadorRouter = require('./src/routes');
+const contadorRouter = require('./src/Routes');
 
 app.use(express.static('public'));
 app.use(express.json());
