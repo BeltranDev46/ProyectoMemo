@@ -1,4 +1,4 @@
-const pool = require('../services/dbService');
+const pool = require('../services/dbService.js');
 
 exports.getContador = async (req, res) => {
   try {
