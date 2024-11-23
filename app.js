@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use('/', contadorRouter);
 
-const PORT = 80;
+const PORT = 3000;
 
 app.listen(PORT, () =>
 {
