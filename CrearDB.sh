@@ -1,16 +1,12 @@
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y mariadb-server mariadb-client
-
-sudo systemctl enable mariadb
-sudo systemctl start mariadb
-sudo mysql_secure_installation
-
-sudo mysql -u root -p
+sudo mysql -u root -p <<EOF
+1234
+EOF
 
 CREATE USER 'roto3'@'172.0.0.1' IDENTIFIED BY 'admin';
-GRANT ALL PRIVILEGES ON *.* TO 'roto3'@'172.0.0.1' WITH GRANT OPTION;
-
 Create database fulldb2;
+GRANT ALL PRIVILEGES ON fulldb2.* TO 'roto3'@'172.0.0.1' WITH GRANT OPTION;
+
+
 use fulldb2;
 
 CREATE TABLE contador (

@@ -1,26 +1,23 @@
-#Pasos 
-
-##Estar en raiz
 cd ..
-
-#instalar lo necesario de node y maria db y git
+#-node
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl wget build-essential -y
+sudo apt install build-essential libssl-dev -y
 
-#Git
-sudo apt install git
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
-#-nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Esto carga nvm
 
-#-Node 14
+nvm --version
+
+
 nvm install 14
 
-#Maria db
+node -v
 
+#MariaDB
 sudo apt install mariadb-server
-sudo systemctl status mariadb
-sudo mysql_secure_installation<<EOF
+sudo mysql_secure_installation <<EOF
 
 y
 1234
@@ -30,14 +27,13 @@ y
 y
 y
 EOF
+#git
+sudo apt install git
 
-sudo systemctl enable mariadb
-
-#entrar a desktop
+#clonar repo
 cd Desktop
-
-#descargar el repo 
 git clone https://github.com/BeltranDev46/ProyectoMemo.git
-#descargar las dependencias 
-npm intall 
-npm install nodemon express maria db
+npm install nodemon express mariadb
+
+#arrancar 
+#Base de datos
