@@ -12,5 +12,5 @@ const PORT = 3000;
 
 app.listen(PORT, () =>
 {
-  console.log(`Iniciamos en ${PORT}`);
+  console.log(`Iniciamos en http://localhost:${PORT}`);
 });

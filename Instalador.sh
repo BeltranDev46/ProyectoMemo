@@ -11,7 +11,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 nvm --version
 
 
-nvm install 22
+nvm install 16
 
 node -v
 
