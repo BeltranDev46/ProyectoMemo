@@ -31,11 +31,11 @@ EOF
 sudo apt install git
 
 #Base de datos
-chmod +x CrearDB.sh
-./CrearDB.sh
+#chmod +x CrearDB.sh
+#./CrearDB.sh
 
 #clonar repo
-cd Desktop
+
 git clone https://github.com/BeltranDev46/ProyectoMemo.git
 cd ProyectoMemo
 npm install nodemon express mariadb
