@@ -3,7 +3,7 @@ const app = express();
 
 const contadorRouter = require('./src/Routes/index.js');
 
-app.use(express.static('public'));
+app.use(express.static('Public'));
 app.use(express.json());
 
 app.use('/', contadorRouter);
