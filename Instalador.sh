@@ -31,8 +31,8 @@ EOF
 sudo apt install git
 
 #Base de datos
-#chmod +x CrearDB.sh
-#./CrearDB.sh
+chmod +x CrearDB.sh
+./CrearDB.sh
 
 #clonar repo
 cd Desktop
@@ -43,5 +43,5 @@ npm install nodemon express mariadb
 
 
 #arrancar 
-#npm start
+npm start
 
